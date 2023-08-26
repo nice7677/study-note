@@ -9,6 +9,7 @@ import java.util.function.Consumer;
 @RequiredArgsConstructor
 @Service
 @Slf4j
+@BankType(code = BankTypeCode.BANK)
 public class ScBankService implements BankService {
 
     private final BankWebClientModule scBankWebClientModule;

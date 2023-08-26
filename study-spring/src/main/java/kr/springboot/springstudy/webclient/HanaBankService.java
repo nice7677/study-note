@@ -1,15 +1,14 @@
 package kr.springboot.springstudy.webclient;
 
-import kr.springboot.springstudy.ocp.practice.Bank;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.stereotype.Service;
 
-import java.util.function.Consumer;
 
 @RequiredArgsConstructor
 @Service
 @Slf4j
+@BankType(code = BankTypeCode.BANK)
 public class HanaBankService implements BankService {
 
     private final BankWebClientModule hanaBankWebClientModule;
