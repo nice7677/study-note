@@ -4,11 +4,27 @@
   <component name="GradleSettings">
     <option name="linkedExternalProjectsSettings">
       <GradleProjectSettings>
-        <option name="distributionType" value="DEFAULT_WRAPPED" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$/../spring-study" />
+        <option name="modules">
+          <set>
+            <option value="$PROJECT_DIR$/../spring-study" />
+          </set>
+        </option>
+      </GradleProjectSettings>
+      <GradleProjectSettings>
         <option name="externalProjectPath" value="$PROJECT_DIR$/gg" />
         <option name="modules">
           <set>
             <option value="$PROJECT_DIR$/gg" />
+          </set>
+        </option>
+      </GradleProjectSettings>
+      <GradleProjectSettings>
+        <option name="externalProjectPath" value="$PROJECT_DIR$/study-spring" />
+        <option name="gradleHome" value="/usr/local/Cellar/gradle/5.2.1/libexec" />
+        <option name="modules">
+          <set>
+            <option value="$PROJECT_DIR$/study-spring" />
           </set>
         </option>
       </GradleProjectSettings>
