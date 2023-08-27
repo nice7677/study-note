@@ -28,6 +28,14 @@ public class WebClientConfig {
                 .build();
     }
 
+    @Bean
+    public WebClient jinwooWebClient() {
+        return WebClient.builder()
+                .filter(logRequest())
+                .baseUrl("http://localhost:8081/api/loans/jinwoo")
+                .build();
+    }
+
     private ExchangeFilterFunction logRequest() {
         return ExchangeFilterFunction.ofRequestProcessor(request -> {
             log.info("Request: {} {}", request.method(), request.url());
