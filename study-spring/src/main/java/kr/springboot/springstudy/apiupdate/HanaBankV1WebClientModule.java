@@ -4,7 +4,7 @@ import org.springframework.stereotype.Component;
 import org.springframework.web.reactive.function.client.WebClient;
 
 @Component("hanaBankV1WebClientModule")
-public class HanaBankV1WebClientModule implements BankWebClientModule {
+public class HanaBankV1WebClientModule implements HanaBankWebClientModule {
 
     @Override
     public String inquiry() {
