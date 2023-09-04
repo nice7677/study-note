@@ -3,7 +3,7 @@ package kr.springboot.springstudy.thinkingaboutdi;
 import kr.springboot.springstudy.transcation.LoanRepository;
 import org.springframework.stereotype.Service;
 
-@Service
+@Service("loanService2")
 public class LoanService {
 
     private final LoanRepository loanRepository;

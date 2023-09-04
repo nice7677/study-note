@@ -6,7 +6,7 @@ import org.springframework.stereotype.Service;
 
 
 @RequiredArgsConstructor
-@Service
+@Service("hanaBankService2")
 @Slf4j
 @BankType(code = BankTypeCode.BANK)
 public class HanaBankService implements BankService {
