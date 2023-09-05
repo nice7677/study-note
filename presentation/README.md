@@ -357,7 +357,11 @@ public class Member {
 ```java
 public class Member {
 
-    private Bucket bucket;
+    private final Bucket bucket;
+    
+    public Member(Bucket bucket) {
+        this.bucket = bucket;
+    }
 
     public void addProduct(String productName, Integer quantity) {
         bucket.addProduct(productName, quantity);
@@ -367,10 +371,14 @@ public class Member {
 
 public class Bucket {
 
-    private final Map<String, Integer> products = new HashMap<>();
+    private final Map<String, Integer> products;
 
+    public Bucket() {
+        products = new HashMap<>();
+    }
+    
     public Map<String, Integer> getProducts() {
-        return products;
+        return Collections.unmodifiableMap(products);
     }
     
     public void addProduct(String productName, Integer quantity) {
