@@ -70,14 +70,6 @@ public class Test {
             System.out.println("Hello, " + name + "!");
         }
     }
-
-    public void newSayHello(String name, String message) {
-        if (!message.isEmpty()) {
-            System.out.println("Hello, " + name + ", " + message + "!");
-            return;
-        }
-        System.out.println("Hello, " + name + "!");
-    }
     
 }
 ```
