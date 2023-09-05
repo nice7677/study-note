@@ -1,7 +1,7 @@
 # 객체지향 생활 체조 원칙
 ### 객체지향 생활 체조 원칙이란?
 
-![xl](https://github.com/nice7677/study-note/blob/main/presentation/XL.jpeg)
+![9788992939249.png](9788992939249.png)
 
 소트웍스 앤솔러지
 
