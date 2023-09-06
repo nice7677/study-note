@@ -1,4 +1,4 @@
-package kr.crypt;
+package kr.springboot.crypt;
 
 import javax.crypto.Cipher;
 import javax.crypto.NoSuchPaddingException;
