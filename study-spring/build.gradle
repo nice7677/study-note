@@ -28,6 +28,7 @@ dependencies {
     implementation 'ch.qos.logback:logback-classic:1.2.6' // Logback 의존성 추가
     implementation 'com.h2database:h2'
     implementation 'com.navercorp.fixturemonkey:fixture-monkey-starter:0.6.3'
+    implementation 'org.springframework.cloud:spring-cloud-starter-contract-stub-runner:4.0.4'
     compileOnly 'org.projectlombok:lombok'
     annotationProcessor 'org.projectlombok:lombok'
     testImplementation 'org.springframework.boot:spring-boot-starter-test'
