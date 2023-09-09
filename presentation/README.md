@@ -343,10 +343,12 @@ public class Member {
 <summary>규칙 8 Refactoring</summary>
 
 ```java
+import java.util.HashMap;
+
 public class Member {
 
     private final Bucket bucket;
-    
+
     public Member(Bucket bucket) {
         this.bucket = bucket;
     }
@@ -354,25 +356,29 @@ public class Member {
     public void addProduct(String productName, Integer quantity) {
         bucket.addProduct(productName, quantity);
     }
-    
+
 }
 
 public class Bucket {
 
     private final Map<String, Integer> products;
 
-    public Bucket() {
-        products = new HashMap<>();
+    public Bucket(Product... products) {
+        Map<String, Integer> products = new HashMap<>();
+        for (Product product : products) {
+            products.put(product.getName(), product.getQuantity());
+        }
+        this.products = products;
     }
-    
+
     public Map<String, Integer> getProducts() {
         return Collections.unmodifiableMap(products);
     }
-    
+
     public void addProduct(String productName, Integer quantity) {
         products.put(productName, quantity);
     }
-    
+
 }
 ```
 </details>
