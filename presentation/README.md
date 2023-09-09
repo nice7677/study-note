@@ -154,21 +154,21 @@ public class User {
 
 public class Name {
     
-    private String name;
+    private String value;
 
     // User에서 처리하던 validateName을 Name에서 처리한다.
     public Name(String name) {
         if (name.length() < 2) {
             throw new RuntimeException("이름은 두 글자 이상이어야 합니다.");
         }
-        this.name = name;
+        this.value = name;
     }
     
 }
 
 public class Age() {
     
-    private int age;
+    private int value;
 
     // User에서 처리하던 validateAge를 Age에서 처리한다.
     public Age(String input) {
@@ -176,6 +176,7 @@ public class Age() {
         if(age < 0) {
             throw new RuntimeException("나이는 0살부터 시작합니다.");
         }
+        this.value = age;
     }
     
 }
