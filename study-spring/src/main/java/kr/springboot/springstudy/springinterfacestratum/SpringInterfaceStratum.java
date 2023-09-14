@@ -1,10 +1,7 @@
 package kr.springboot.springstudy.springinterfacestratum;
 
 import org.springframework.beans.BeansException;
-import org.springframework.beans.factory.BeanFactory;
-import org.springframework.beans.factory.ListableBeanFactory;
-import org.springframework.beans.factory.NoSuchBeanDefinitionException;
-import org.springframework.beans.factory.ObjectProvider;
+import org.springframework.beans.factory.*;
 import org.springframework.beans.factory.support.BeanDefinitionRegistry;
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.ConfigurableApplicationContext;
@@ -20,10 +17,25 @@ public class SpringInterfaceStratum {
     AnnotationConfigRegistry annotationConfigRegistry = new AnnotationConfigApplicationContext();
     GenericApplicationContext genericApplicationContext = new GenericApplicationContext();
     BeanDefinitionRegistry beanDefinitionRegistry = new AnnotationConfigApplicationContext();
+
+    /**
+     * 추상화 단계에 들어왔고
+     * getAutowireCapableBeanFactory를 사용해 @Autowire를 사용할 수 있게 됨.
+     * BeanFactory를 상속한 AutowireCapableBeanFactory를 사용함.
+     */
     AbstractApplicationContext abstractApplicationContext = new AnnotationConfigApplicationContext();
+
+    // Application을 상속 하고 있음.
     ConfigurableApplicationContext configurableApplicationContext = new AnnotationConfigApplicationContext();
+
+    // 스프링 컨테이너
     ApplicationContext applicationContext = new AnnotationConfigApplicationContext();
+
+    // ListableBeanFactory 는 구현 해야 한다
     ListableBeanFactory listableBeanFactory = new AnnotationConfigApplicationContext();
+    // BeanFactory 를 상속 받고 있음.
+    HierarchicalBeanFactory hierarchicalBeanFactory = new AnnotationConfigApplicationContext();
+    // BeanFactory는 최상위 인터페이스임
     BeanFactory beanFactory = new BeanFactory() {
         @Override
         public Object getBean(String name) throws BeansException {
